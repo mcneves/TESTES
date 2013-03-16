@@ -4,6 +4,8 @@
  */
 package eapli.expensemanager;
 
+import eapli.util.Console;
+
 /**
  *
  * @author mcn
@@ -14,6 +16,10 @@ public class EapliExpenseManager {
        * @param args the command line arguments
        */
       public static void main(String[] args) {
-            // TODO code application logic here
+            
+            String nome=Console.readLine("Ola. Como te chamas?");
+            System.out.println("Ola "+nome);
+            
+            
       }
 }
