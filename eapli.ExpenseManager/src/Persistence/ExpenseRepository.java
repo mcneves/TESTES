@@ -3,20 +3,26 @@
  * and open the template in the editor.
  */
 package Persistence;
-
-import Model.Expense;
+import Model.*;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
-
 /**
  *
- * @author mcn
+ * @author losa
  */
-public class ExpenseRepository {
+public class ExpenseRepository  implements IExpenseRepository
+{
+    // class member
+    private static List<Expense> listExpense= new ArrayList<Expense>();
 
-      private static List<Expense> lExpenses = new ArrayList<>();
-
-      public static void saveExpense(Expense expense) {
-            lExpenses.add(expense);
-      }
+    public ExpenseRepository() {}
+    
+    public void saveExpense(Expense exp)
+    {
+        if (exp==null) throw new IllegalArgumentException();
+        listExpense.add(exp);
+      
+    }
 }
+

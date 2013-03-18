@@ -1,21 +1,15 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Presentation;
 
 import eapli.util.Console;
 
-/**
- *
- * @author mcn
- */
-public class EapliExpenseManager {
 
-      /**
-       * @param args the command line arguments
-       */
-      public static void main(String[] args) {
+public class MainMenu {
+
+      public MainMenu() {
+      }
+
+      public void mainLoop() {
             int op;
             do {
                   op = menu();

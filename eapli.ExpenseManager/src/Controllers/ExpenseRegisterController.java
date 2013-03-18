@@ -4,6 +4,7 @@
  */
 package Controllers;
 
+import Model.ContaCorrente;
 import java.math.BigDecimal;
 import java.util.Date;
 import Model.Expense;
@@ -20,6 +21,6 @@ public class ExpenseRegisterController {
 
       public void registerExpense(String what, Date date, BigDecimal amount) {
             Expense expense = new Expense(what, date, amount);
-            ExpenseRepository.saveExpense(expense);
+            ContaCorrente.getInstance().expenseRepository.saveExpense(expense);
       }
 }
