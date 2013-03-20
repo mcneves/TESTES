@@ -5,11 +5,13 @@
 package Persistence;
 
 import Model.Expense;
+import java.util.List;
 /**
  *
- * @author mcn
+ * @author 
  */
 public interface IExpenseRepository {
           void saveExpense(Expense exp);
-  //  List<Expense> getAllExpenses();  
+          List<Expense> getAllExpenses();  
+          Expense getLastExpense();
 }
