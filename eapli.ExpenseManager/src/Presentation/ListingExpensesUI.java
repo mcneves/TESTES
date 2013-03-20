@@ -46,7 +46,7 @@ public class ListingExpensesUI {
             System.out.println("* * *  SHOW EXPENSES  * * *\n");
             System.out.println("1. All expenses");
             System.out.println("2. Last expense");
-            System.out.println("0. End\n\n");
+            System.out.println("0. End show expenses\n\n");
             int op = Console.readInteger("Choose an option");
             return op;
       }
