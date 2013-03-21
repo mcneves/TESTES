@@ -21,6 +21,8 @@ public class ExpenseRegisterController {
 
       public void registerExpense(String what, Date date, BigDecimal amount) {
             Expense expense = new Expense(what, date, amount);
-            ContaCorrente.getInstance().expenseRepository.saveExpense(expense);
+            ExpenseRepository controller=new ExpenseRepository();
+            controller.saveExpense(expense);
+           // ContaCorrente.getInstance().expenseRepository.saveExpense(expense);
       }
 }
