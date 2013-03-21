@@ -1,7 +1,7 @@
 package Presentation;
 
 import eapli.util.Console;
-import Presentation.ExpensesListUI;
+import Presentation.ListingExpensesUI;
 
 
 public class MainMenu {
