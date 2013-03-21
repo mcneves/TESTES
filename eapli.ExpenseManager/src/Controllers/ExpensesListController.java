@@ -3,10 +3,11 @@
  * and open the template in the editor.
  */
 package Controllers;
-import Model.ContaCorrente;
+
 import Model.Expense;
 import Persistence.ExpenseRepository;
 import java.util.List;
+
 /**
  *
  * @author mcn
@@ -17,10 +18,14 @@ public class ExpensesListController {
             
       }
       
-      public List<Expense> listExpenses(){
+     public  List<Expense> getAllExpenses(){
             ExpenseRepository repo=new ExpenseRepository();
-            List <Expense> list=repo.getAllExpenses();
-            return list;
+            return repo.getAllExpenses();
       }
+      
+      public Expense getLastExpense(){
+            ExpenseRepository repo=new ExpenseRepository();
+            return repo.getLastExpense();
+      } 
       
 }

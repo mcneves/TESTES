@@ -14,28 +14,35 @@ import java.util.List;
  *
  * @author losa
  */
-public class ExpenseRepository implements IExpenseRepository {
-      // class member
+public class ExpenseRepository  implements IExpenseRepository
+{
+    // class member
+    private static List<Expense> listExpense= new ArrayList<>();
 
-      private static List<Expense> listExpense = new ArrayList<>();
-
-      public ExpenseRepository() {
-      }
-
-      @Override
-      public void saveExpense(Expense exp) {
-            if (exp == null) {
-                  throw new IllegalArgumentException();
-
-            }
-            listExpense.add(exp);
-
-      }
-
-      @Override
-      public List<Expense> getAllExpenses() {
-            List<Expense> list = listExpense;
-            list = Collections.unmodifiableList(list);
-            return list;
-      }
+    public ExpenseRepository() {}
+    
+    public void saveExpense(Expense exp)
+    {
+        if (exp==null) throw new IllegalArgumentException();
+        listExpense.add(exp);
+      
+    }
+    public List<Expense> getAllExpenses(){
+          return Collections.unmodifiableList(listExpense);
+         
+    }
+    
+    public Expense getLastExpense(){
+          Expense exp=null;
+          Expense copy=null;
+          int size=listExpense.size();
+          if (size >0)  {   
+                exp=listExpense.get(size-1);
+          }
+         
+          if(exp!=null){
+                          copy=new Expense(exp);
+          }
+          return copy;
+    }
 }
