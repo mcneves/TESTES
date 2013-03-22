@@ -25,6 +25,11 @@ public class MainMenu {
                               ListingExpensesUI ui = new ListingExpensesUI();
                               ui.loopUI();
                               break;
+                              
+                        case 3:
+                //              ExpenseTypeRegisterUI ui = new ListingExpensesUI();
+                  //            ui.loopUI();
+                              break;
 
                   }
             } while (op != 0);
@@ -37,6 +42,7 @@ public class MainMenu {
             System.out.println("===================\n");
             System.out.println("1. Register an expense");
             System.out.println("2. Show expenses");
+            System.out.println("3. Register expense types");
             
             System.out.println("0. Exit\n\n");
 

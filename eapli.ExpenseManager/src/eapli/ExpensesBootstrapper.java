@@ -12,7 +12,7 @@ import java.math.BigDecimal;
  *
  * @author mcn
  */
-public class ExpenseBootstarpper {
+public class ExpensesBootstrapper {
       static {
         IExpenseRepository repo = new ExpenseRepository();
         

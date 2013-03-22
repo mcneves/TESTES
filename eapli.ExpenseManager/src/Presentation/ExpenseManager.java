@@ -4,14 +4,13 @@
  */
 package Presentation;
 
-import eapli.ExpenseBootstarpper;
+import eapli.ExpensesBootstrapper;
 
 public class ExpenseManager {
 
 
       public static void main(String[] args) {
-            ExpenseBootstarpper boot;
-            boot=new ExpenseBootstarpper();
+            ExpensesBootstrapper boot=new ExpensesBootstrapper();
             MainMenu menu = new MainMenu();
             menu.mainLoop();
 
