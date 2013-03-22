@@ -28,6 +28,7 @@ public class ExpenseRepository  implements IExpenseRepository
       
     }
     public List<Expense> getAllExpenses(){
+          
           return Collections.unmodifiableList(listExpense);
          
     }
@@ -39,7 +40,7 @@ public class ExpenseRepository  implements IExpenseRepository
           if (size >0)  {   
                 exp=listExpense.get(size-1);
           }
-         
+     
           if(exp!=null){
                           copy=new Expense(exp);
           }

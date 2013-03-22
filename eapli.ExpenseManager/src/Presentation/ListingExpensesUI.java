@@ -53,8 +53,10 @@ public class ListingExpensesUI {
 
  
       private void displayList(List<Expense> list) {
+            int i=0;
             for (Expense exp : list) {
-                  System.out.println("Expense:" + exp);
+                  i++;
+                  System.out.println("\nExpense "+i+"\n" + exp);
             }
       }
 }
