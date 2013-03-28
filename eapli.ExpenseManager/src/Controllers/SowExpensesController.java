@@ -12,9 +12,9 @@ import java.util.List;
  *
  * @author mcn
  */
-public class ExpensesListController {
+public class SowExpensesController {
       
-      public ExpensesListController(){
+      public SowExpensesController(){
             
       }
       
