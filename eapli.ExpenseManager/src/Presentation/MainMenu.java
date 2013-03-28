@@ -1,7 +1,7 @@
 package Presentation;
 
 import eapli.util.Console;
-import Presentation.ListingExpensesUI;
+import Presentation.ShowExpensesUI;
 
 
 public class MainMenu {
@@ -22,7 +22,7 @@ public class MainMenu {
                               expenseregisterUI.run();
                               break;
                         case 2:
-                              ListingExpensesUI ui = new ListingExpensesUI();
+                              ShowExpensesUI ui = new ShowExpensesUI();
                               ui.loopUI();
                               break;
                               
