@@ -13,9 +13,9 @@ import eapli.util.Console;
  *
  * @author mcn
  */
-public class ListingExpensesUI {
+public class ShowExpensesUI {
 
-      public ListingExpensesUI() {
+      public ShowExpensesUI() {
       }
 
       public void loopUI() {
