@@ -21,7 +21,9 @@ public class ShowExpensesUI {
       public void loopUI() {
             int op;
             ExpensesListController controller = new ExpensesListController();
-            do {
+           
+           Expense expense=null;
+                   do {
                   op = menu();              
                   switch (op) {
                         case 0:
@@ -31,8 +33,12 @@ public class ShowExpensesUI {
                               List<Expense> list= controller.getAllExpenses();
                               displayList(list);
                               break;
-                        case 2:
-                                Expense expense = controller.getLastExpense();
+                               case 2:
+                                 expense = controller.getFirstExpense();
+                              System.out.println("First Expense"+expense);
+                              break;
+                        case 3:
+                                 expense = controller.getLastExpense();
                               System.out.println("Last Expense"+expense);
                               break;
                         default:
@@ -45,7 +51,8 @@ public class ShowExpensesUI {
       private int menu() {
             System.out.println("* * *  SHOW EXPENSES  * * *\n");
             System.out.println("1. All expenses");
-            System.out.println("2. Last expense");
+            System.out.println("2. First expense");
+            System.out.println("3. Last expense");
             System.out.println("0. End show expenses\n\n");
             int op = Console.readInteger("Choose an option");
             return op;
@@ -54,8 +61,9 @@ public class ShowExpensesUI {
  
       private void displayList(List<Expense> list) {
             int i=0;
+            System.out.println("List of Expenses");
             for (Expense exp : list) {
-                  i++;
+                  i=i+1;
                   System.out.println("\nExpense "+i+"\n" + exp);
             }
       }

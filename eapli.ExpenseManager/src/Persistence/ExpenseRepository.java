@@ -40,10 +40,27 @@ public class ExpenseRepository  implements IExpenseRepository
           if (size >0)  {   
                 exp=listExpense.get(size-1);
           }
-     
+  
+//          if(exp!=null){
+//                          copy=new Expense(exp);
+//          }
+//          return copy;
           if(exp!=null){
-                          copy=new Expense(exp);
+                          exp=new Expense(exp);
           }
-          return copy;
+          return exp;
+          
+    }
+    public Expense getFirstExpense(){
+          Expense exp=null;
+          int size=listExpense.size();
+          if (size >0)  {   
+                exp=listExpense.get(0);
+          }
+                   if(exp!=null){
+                          exp=new Expense(exp);
+          }
+          return exp;
+
     }
 }

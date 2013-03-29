@@ -28,4 +28,9 @@ public class ExpensesListController {
             return repo.getLastExpense();
       } 
       
+      public Expense getFirstExpense(){
+            ExpenseRepository repo=new ExpenseRepository();
+            return repo.getFirstExpense();
+      } 
+      
 }
