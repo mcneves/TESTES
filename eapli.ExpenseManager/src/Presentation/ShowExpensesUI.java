@@ -4,7 +4,7 @@
  */
 package Presentation;
 
-import Controllers.ExpensesListController;
+import Controllers.SowExpensesController;
 import Model.Expense;
 import java.util.List;
 import eapli.util.Console;
@@ -18,12 +18,11 @@ public class ShowExpensesUI {
       public ShowExpensesUI() {
       }
 
-      public void loopUI() {
+      public void loop() {
             int op;
-            ExpensesListController controller = new ExpensesListController();
-           
-           Expense expense=null;
-                   do {
+            Expense expense=null;
+            SowExpensesController controller = new SowExpensesController();
+            do {
                   op = menu();              
                   switch (op) {
                         case 0:

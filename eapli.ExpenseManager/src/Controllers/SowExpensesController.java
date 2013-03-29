@@ -12,9 +12,9 @@ import java.util.List;
  *
  * @author mcn
  */
-public class ExpensesListController {
+public class SowExpensesController {
       
-      public ExpensesListController(){
+      public SowExpensesController(){
             
       }
       
@@ -23,14 +23,13 @@ public class ExpensesListController {
             return repo.getAllExpenses();
       }
       
-      public Expense getLastExpense(){
-            ExpenseRepository repo=new ExpenseRepository();
-            return repo.getLastExpense();
-      } 
-      
       public Expense getFirstExpense(){
             ExpenseRepository repo=new ExpenseRepository();
             return repo.getFirstExpense();
+      } 
+            public Expense getLastExpense(){
+            ExpenseRepository repo=new ExpenseRepository();
+            return repo.getLastExpense();
       } 
       
 }

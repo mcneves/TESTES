@@ -23,7 +23,7 @@ public class MainMenu {
                               break;
                         case 2:
                               ShowExpensesUI ui = new ShowExpensesUI();
-                              ui.loopUI();
+                              ui.loop();
                               break;
                               
                         case 3:
